@@ -1,0 +1,15 @@
+nav {
+  ul {
+    margin-left: 0;
+    list-style: none;
+  }
+
+  li {
+    &,
+    > a{
+      display  :inline-block;
+       *display:inline;
+      zoom:1;
+    }
+  }
+}
