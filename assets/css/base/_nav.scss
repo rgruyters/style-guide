@@ -1,4 +1,6 @@
 nav {
+  @include rem(margin-bottom, $base-spacing-unit);
+
   ul {
     margin-left: 0;
     list-style: none;
@@ -11,5 +13,23 @@ nav {
        *display:inline;
       zoom:1;
     }
+  }
+}
+
+.nav--stacked li {
+  display: item;
+
+  > a {
+    display: block;
+  }
+}
+
+.nav--banner { text-align: center; }
+
+.nav--block {
+  line-height: 1;
+
+  > li a {
+    padding: $half-spacing-unit;
   }
 }

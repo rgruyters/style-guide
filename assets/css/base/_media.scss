@@ -1,14 +1,24 @@
-img { border: 0; }
+img {
+  max-width: 100%;
+  height: auto;
+}
 
-svg:not(:root) { overflow: hidden; }
-
-figure { margin: 0; }
-
-audio,
-canvas,
-video { display: inline-block; }
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
+/**
+ * Image placement variations.
+ */
+.img--right{
+  float:right;
+  @include rem(margin-bottom, $base-spacing-unit);
+  margin-left: $gutter-unit;
+}
+.img--left{
+  float:left;
+  margin-right:$gutter-unit;
+  @include rem(margin-bottom, $base-spacing-unit);
+}
+.img--center{
+  display:block;
+  margin-right:auto;
+  @include rem(margin-bottom, $base-spacing-unit);
+  margin-left:auto;
 }

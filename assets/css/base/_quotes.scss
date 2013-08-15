@@ -1,0 +1,5 @@
+blockquote {
+  @include rem(margin-bottom, $base-spacing-unit);
+  
+  p:last-of-type { margin-bottom: 0; }
+}

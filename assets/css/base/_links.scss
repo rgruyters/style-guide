@@ -1,6 +1,7 @@
-a:focus { outline: thin dotted; }
+a {
 
-a:active,
-a:hover {
-  outline: 0;
+  &:hover { }
+  &:link { }
+  &:active { }
+  &:focus { }
 }
