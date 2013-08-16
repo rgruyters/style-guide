@@ -1,6 +1,7 @@
 @for $h from 1 through 6 {
   h#{$h} {
     margin-top: 0;
+    margin-bottom: 0;
     font-family: $header-font-family;
   }
 }

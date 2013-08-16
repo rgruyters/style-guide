@@ -1,0 +1,12 @@
+table {
+  @include rem(margin-bottom, $base-spacing-unit);
+}
+th {
+  @include rem(padding: $half-spacing-unit);
+  // background-color: lighten($colour-palette2, 30%);
+  text-align: left;
+}
+td {
+  @include rem(padding-bottom, $half-spacing-unit);
+  vertical-align: top;
+}

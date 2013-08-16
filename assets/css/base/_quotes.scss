@@ -1,5 +1,20 @@
-blockquote {
-  @include rem(margin-bottom, $base-spacing-unit);
+q {
+  display: inline;
+  content: "\201C" "\201D" "\2018" "\2019";
   
+  &:before { content: open-quote; }
+  &:after { content: close-quote; }
+}
+
+cite, blockquote {
+  font-style: italic;
+  color: $base-text-color;
+}
+blockquote {
+  @include(margin-bottom, $base-spacing-unit);
+  @include(padding, $base-spacing-unit);
+  // background-color: lighten($colour-secondary, 20%);
+
   p:last-of-type { margin-bottom: 0; }
 }
+blockquote cite:before { content: "— \0020"; }

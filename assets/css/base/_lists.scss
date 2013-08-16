@@ -1,0 +1,14 @@
+ul, ol, dl {
+  margin: 0 0 $base-spacing-unit;
+  padding: 0;
+}
+ul ul, ol ol,
+dl dl, ul li ul { margin-bottom: 0; }
+ul li, ol li    { margin-left: $gutter-unit; }
+ul              { list-style: disc; }
+ol              { list-style: decimal; }
+dl dt           { font-weight: bold; }
+dl {
+  dd              { margin: 0 0 $base-spacing-unit; }
+  dd:last-of-type { margin-bottom: 0; }
+}

@@ -1,7 +1,8 @@
 a {
+  text-decoration: underline;
+  word-wrap: break-word;
 
-  &:hover { }
-  &:link { }
-  &:active { }
-  &:focus { }
+  &:hover   { }
+  &:active  { }
+  &:visited { }
 }

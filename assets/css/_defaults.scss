@@ -1,8 +1,11 @@
 $base-font-size:   16px!default;
 $base-line-height: 22px!default;
 
-$base-font-family:   Helvetica, Arial, sans-serif;
-$header-font-family: $base-font-family;
+$base-font-family:     Helvetica, Arial, sans-serif;
+$header-font-family:   $base-font-family;
+$base-font-weight:     400;
+$semibold-font-weight: 500;
+$bold-font-weight:     700;
 
 $base-text-color: #333!default;
 $base-bg-color:   #fff!default;
