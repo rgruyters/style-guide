@@ -11,8 +11,8 @@ cite, blockquote {
   color: $base-text-color;
 }
 blockquote {
-  @include(margin-bottom, $base-spacing-unit);
-  @include(padding, $base-spacing-unit);
+  @include rem(margin-bottom, $base-spacing-unit);
+  @include rem(padding, $base-spacing-unit);
   // background-color: lighten($colour-secondary, 20%);
 
   p:last-of-type { margin-bottom: 0; }

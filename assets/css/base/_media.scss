@@ -10,23 +10,3 @@ figcaption {
   @include rem(margin-top, $half-spacing-unit);
   @include rem(margin-bottom, $half-spacing-unit);
 }
-
-/**
- * Image placement variations.
- */
-.img--right{
-  float:right;
-  @include rem(margin-bottom, $base-spacing-unit);
-  margin-left: $gutter-unit;
-}
-.img--left{
-  float:left;
-  margin-right:$gutter-unit;
-  @include rem(margin-bottom, $base-spacing-unit);
-}
-.img--center{
-  display:block;
-  margin-right:auto;
-  @include rem(margin-bottom, $base-spacing-unit);
-  margin-left:auto;
-}

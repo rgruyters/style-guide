@@ -1,12 +1,14 @@
+/* Clearfix */
 .group {
-  *zoom: 1;
-
-  &:before, &:after {
-    content: " ";
-    display: table;
+  @if $ie == true {
+    zoom: 1; /* IE < 8 */
+  } @else {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
   }
-
-  &:after { clear: both; }
 }
 
 /* Completely remove from the flow and screen readers. */

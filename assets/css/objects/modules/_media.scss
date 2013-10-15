@@ -1,3 +1,23 @@
+/**
+ * Image placement variations.
+ */
+.img--right {
+  float:right;
+  @include rem(margin-bottom, $base-spacing-unit);
+  margin-left: $gutter-unit;
+}
+.img--left {
+  float:left;
+  margin-right:$gutter-unit;
+  @include rem(margin-bottom, $base-spacing-unit);
+}
+.img--center {
+  display:block;
+  margin-right:auto;
+  @include rem(margin-bottom, $base-spacing-unit);
+  margin-left:auto;
+}
+
 .media { }
 .media_img { }
 .media_img_rev { }

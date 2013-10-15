@@ -1,5 +1,6 @@
 ul, ol, dl {
-  margin: 0 0 $base-spacing-unit;
+  margin: 0;
+  @include rem(margin-bottom, $base-spacing-unit);
   padding: 0;
 }
 ul ul, ol ol,
@@ -9,6 +10,9 @@ ul              { list-style: disc; }
 ol              { list-style: decimal; }
 dl dt           { font-weight: bold; }
 dl {
-  dd              { margin: 0 0 $base-spacing-unit; }
+  dd {
+    margin: 0;
+    @include rem(margin-bottom, $base-spacing-unit);
+  }
   dd:last-of-type { margin-bottom: 0; }
 }

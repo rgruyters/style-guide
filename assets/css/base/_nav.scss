@@ -15,21 +15,3 @@ nav {
     }
   }
 }
-
-.nav--stacked li {
-  display: item;
-
-  > a {
-    display: block;
-  }
-}
-
-.nav--banner { text-align: center; }
-
-.nav--block {
-  line-height: 1;
-
-  > li a {
-    padding: $half-spacing-unit;
-  }
-}
