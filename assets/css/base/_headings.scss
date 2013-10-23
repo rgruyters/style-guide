@@ -1,7 +1,8 @@
 @for $h from 1 through 6 {
   h#{$h} {
     margin-top: 0;
-    @include rem(margin-bottom, $base-spacing-unit);
+    margin-bottom: 0;
+    // @include rem(margin-bottom, $base-spacing-unit);
     font-family: $header-font-family;
   }
 }

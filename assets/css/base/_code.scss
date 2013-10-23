@@ -8,7 +8,7 @@ code  {
 pre, .code {
   // color: $colour-pre;
   // background-color: $colour-pre-background;
-  @include rem(margin-bottom, $base-spacing-unit);
+  @include rem(margin-bottom, $half-spacing-unit);
   @include rem(padding, $half-spacing-unit);
 }
 

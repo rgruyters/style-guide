@@ -2,7 +2,7 @@
  * Generic stuff
  */
 @import
-  "defaults",
+  "generic/defaults",
   "generic/mixins",
   "generic/functions",
   "generic/reset",
@@ -15,6 +15,7 @@
   "base/main",
   "base/headings",
   "base/paragraphs",
+  "base/links",
   "base/smallprint",
   "base/quotes",
   "base/code",
@@ -35,6 +36,7 @@
  */
 @import
   "objects/modules/nav",
+  "objects/modules/forms",
   "objects/modules/media";
 
 /*

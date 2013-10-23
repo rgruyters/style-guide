@@ -1,7 +1,11 @@
 a {
+  color: #333;
   text-decoration: underline;
   word-wrap: break-word;
 
+  &:hover,
+  &:focus { color: #888; }
+  
   &:hover   { }
   &:active  { }
   &:visited { }
