@@ -1,0 +1,26 @@
+fieldset {
+  margin: 0;
+  @include rem(padding, $half-spacing-unit);
+  border: none;
+}
+
+label {
+  display: block;
+}
+
+textarea,
+input:not([type="button"]) {
+  @include rem(padding-top, ($half-spacing-unit / 2));
+  @include rem(padding-bottom, ($half-spacing-unit / 2));
+  border: 2px solid $color-main;
+  color: #34495e;
+  text-indent: $gutter-unit;
+  border-radius: 2px;
+  box-shadow: none;
+
+  &:focus {
+    border-color: $color-accent;
+    box-shadow: none;
+    outline: none;
+  }
+}

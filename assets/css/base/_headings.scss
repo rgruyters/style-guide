@@ -1,14 +1,18 @@
 @for $h from 1 through 6 {
   h#{$h} {
     margin-top: 0;
-    @include rem(margin-bottom, $base-spacing-unit);
+    margin-bottom: 0;
+    // @include rem(margin-bottom, $base-spacing-unit);
     font-family: $header-font-family;
   }
 }
 
-h1, .alpha   { @include font-size($h1-size); }
-h2, .beta    { @include font-size($h2-size); }
-h3, .gamma   { @include font-size($h3-size); }
-h4, .delta   { @include font-size($h4-size); }
-h5, .epsilon { @include font-size($h5-size); }
-h6, .zeta    { @include font-size($h6-size); }
+h1, .alpha   {
+  @include font-size($h1-size, true);
+  @include rem(margin-bottom, ($h1-size / $base-line-height)*1px);
+}
+h2, .beta    { @include font-size($h2-size, true); }
+h3, .gamma   { @include font-size($h3-size, true); }
+h4, .delta   { @include font-size($h4-size, true); }
+h5, .epsilon { @include font-size($h5-size, true); }
+h6, .zeta    { @include font-size($h6-size, true); }

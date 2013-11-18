@@ -1,4 +1,5 @@
 $ie: false;
+$debug: false;
 
 $base-font-size:   16px!default;
 $base-line-height: 22px!default;
@@ -9,8 +10,13 @@ $base-font-weight:     400;
 $semibold-font-weight: 500;
 $bold-font-weight:     700;
 
-$base-text-color: #333!default;
-$base-bg-color:   #fff!default;
+$color-main:    #34495e!default; // dark
+$color-light:   #1abc9c!default; // green
+$color-accent:  #3498db!default; // blue
+$color-text:    #333!default;    // black
+$color-bg:      #fff!default;    // white
+$color-valid:   #1abc9c!default;
+$color-invalid: #e74c3c!default;
 
 $h1-size: 36px!default; // .alpha
 $h2-size: 30px!default; // .beta

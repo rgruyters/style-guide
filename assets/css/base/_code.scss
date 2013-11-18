@@ -1,17 +1,11 @@
 pre { word-wrap: break-word; }
 
-code  {
-  @include rem(padding, $half-spacing-unit);
-  // color: $colour-code;
-  // background-color: $colour-code-background;
-}
-pre, .code {
-  // color: $colour-pre;
-  // background-color: $colour-pre-background;
+pre, code, .code {
+  margin-top: 0;
   @include rem(margin-bottom, $base-spacing-unit);
   @include rem(padding, $half-spacing-unit);
+  color: $color-main;
 }
-
 pre code, .code code {
   background-color: transparent;
   border: none;

@@ -1,8 +1,7 @@
 /* Clearfix */
 .group {
-  @if $ie == true {
-    zoom: 1; /* IE < 8 */
-  } @else {
+  @if $ie == true { zoom: 1; /* IE < 8 */ }
+  @else {
     &:after {
       content: "";
       display: table;
@@ -40,3 +39,7 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.hide-small { }
+.hide-med   { }
+.hide-large { }

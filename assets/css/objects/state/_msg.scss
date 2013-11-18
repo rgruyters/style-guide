@@ -1,0 +1,8 @@
+.msg { }
+
+.msg--valid   { color: $color-valid; }
+.msg--invalid { color: $color-invalid; }
+.msg--info    { color: $color-main; }
+
+.is-valid     { border-color: $color-valid!important; }
+.is-invalid   { border-color: $color-invalid!important; }

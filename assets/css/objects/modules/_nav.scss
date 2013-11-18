@@ -1,7 +1,7 @@
 .nav { }
 
 .nav--stacked li {
-  display: item;
+  display: list-item;
 
   > a {
     display: block;
@@ -12,6 +12,7 @@
 
 .nav--block {
   line-height: 1;
+  
   /**
    * Remove whitespace caused by `inline-block`.
    */
@@ -23,11 +24,11 @@
     letter-spacing: normal;
     word-spacing: normal;
 
-    > a{ padding:$half-spacing-unit; }
+    > a{ padding: $half-spacing-unit; }
   }
 }
 
-.nav--fit{
+.nav--fit {
   display: table;
   width: 100%;
 

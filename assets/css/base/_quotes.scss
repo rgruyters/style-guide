@@ -1,19 +1,20 @@
 q {
   display: inline;
   content: "\201C" "\201D" "\2018" "\2019";
-  
+
   &:before { content: open-quote; }
   &:after { content: close-quote; }
 }
 
 cite, blockquote {
   font-style: italic;
-  color: $base-text-color;
+  color: darken($color-main, 10%);
 }
 blockquote {
+  margin-top: 0;
   @include rem(margin-bottom, $base-spacing-unit);
   @include rem(padding, $base-spacing-unit);
-  // background-color: lighten($colour-secondary, 20%);
+  background-color: lighten($color-accent, 40%);
 
   p:last-of-type { margin-bottom: 0; }
 }

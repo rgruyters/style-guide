@@ -1,6 +1,10 @@
 a {
+  color: $color-main;
   text-decoration: underline;
   word-wrap: break-word;
+
+  &:hover,
+  &:focus { color: $color-accent; }
 
   &:hover   { }
   &:active  { }
