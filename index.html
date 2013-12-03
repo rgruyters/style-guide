@@ -98,44 +98,47 @@ p q r s t u v w x y z { | } ~
       </section>
       <section>
         <h2>Formulieren</h2>
-        <fieldset>
-          <div class="forms__content">
-            <label for="text">Tekst Invoer <abbr title="Verplicht">*</abbr></label>
-            <input id="text" type="text" placeholder="Tekst Invoer">
-          </div>
-          <div class="forms__content">
-            <label for="password">Wachtwoord</label>
-            <input id="password" type="password" placeholder="Typ je wachtwoord">
-          </div>
-          <div class="forms__content">
-              <label for="webaddress">Web Adres</label>
-              <input id="webaddress" type="url" placeholder="http://yoursite.com">
-          </div>
-          <div class="forms__content">
-            <label for="emailaddress">E-Mail Adres</label>
-            <input id="emailaddress" type="email" placeholder="name@email.com">
-          </div>
-          <div class="forms__content">
-            <label for="search">Zoeken</label>
-            <input id="search" type="search" placeholder="Voer een zoekterm in">
-          </div>
-          <div class="forms__content">
-            <label for="text">Nummer Invoer <abbr title="Verplicht">*</abbr></label>
-            <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
-          </div>
-          <div class="forms__content">
-            <label for="textarea">Textarea</label>
-            <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
-          </div>
-          <div class="forms__content">
-            <label class="msg--invalid">Niet valide Invoer</label>
-            <input class="is-invalid" type="text" placeholder="Text Input">
-          </div>
-          <div class="forms__content">
-            <label  class="msg--valid">Valide</label>
-            <input  class="is-valid" type="text" placeholder="Text Input">
-          </div>
-        </fieldset>
+        <form method="POST">
+          <fieldset>
+            <div class="forms__content">
+              <label for="text">Tekst Invoer <abbr title="Verplicht">*</abbr></label>
+              <input id="text" type="text" placeholder="Tekst Invoer">
+            </div>
+            <div class="forms__content">
+              <label for="password">Wachtwoord</label>
+              <input id="password" type="password" placeholder="Typ je wachtwoord">
+            </div>
+            <div class="forms__content">
+                <label for="webaddress">Web Adres</label>
+                <input id="webaddress" type="url" placeholder="http://yoursite.com">
+            </div>
+            <div class="forms__content">
+              <label for="emailaddress">E-Mail Adres</label>
+              <input id="emailaddress" type="email" placeholder="name@email.com">
+            </div>
+            <div class="forms__content">
+              <label for="search">Zoeken</label>
+              <input id="search" type="search" placeholder="Voer een zoekterm in">
+            </div>
+            <div class="forms__content">
+              <label for="text">Nummer Invoer <abbr title="Verplicht">*</abbr></label>
+              <input id="text" type="number" placeholder="Enter a Number" pattern="[0-9]*">
+            </div>
+            <div class="forms__content">
+              <label for="textarea">Textarea</label>
+              <textarea id="textarea" rows="8" cols="48" placeholder="Enter your message here"></textarea>
+            </div>
+            <div class="forms__content">
+              <label class="msg--invalid">Niet valide Invoer</label>
+              <input class="is-invalid" type="text" placeholder="Text Input">
+            </div>
+            <div class="forms__content">
+              <label  class="msg--valid">Valide</label>
+              <input  class="is-valid" type="text" placeholder="Text Input">
+            </div>
+          </fieldset>
+          <input type="button" class="btn btn--main" value="Verstuur">
+        </form>
       </section>
     </div>
   </div>

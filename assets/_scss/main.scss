@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
  * Generic stuff
  */
@@ -38,14 +40,15 @@
 @import
   "objects/modules/nav",
   "objects/modules/forms",
-  "objects/modules/media";
+  "objects/modules/media",
+  "objects/modules/btn";
 
 /*
  * Objects: states
  */
 @import
-  "objects/state/generic",
-  "objects/state/msg";
+  "objects/states/generic",
+  "objects/states/msg";
 
 /*
  * Objects: themes

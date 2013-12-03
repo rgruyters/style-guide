@@ -1,16 +1,22 @@
-ins, mark {
+ins,
+mark {
   color: #fff;
   // background-color: lighten($colour-highlight, 40%);
 }
+
 ins { text-decoration: none; }
-mark  {
-  font-style: italic;
-}
+
+mark  { font-style: italic; }
+
 del { text-decoration: line-through; }
-b, strong { font-weight: $bold-font-weight; }
+
+b,
+strong { font-weight: $bold-font-weight; }
+
 dfn { font-style: italic; }
 
-abbr[title], dfn[title] {
+abbr[title],
+dfn[title] {
   border-bottom: 1px dotted;
   cursor: help;
 }

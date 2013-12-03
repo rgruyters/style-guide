@@ -1,12 +1,12 @@
+form { @include rem(margin-bottom, $base-spacing-unit); }
+
 fieldset {
   margin: 0;
   @include rem(padding, $half-spacing-unit);
   border: none;
 }
 
-label {
-  display: block;
-}
+label { display: block; }
 
 textarea,
 input:not([type="button"]) {
