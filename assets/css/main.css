@@ -801,9 +801,24 @@ td {
   display: block;
 }
 
-.forms__content {
+.form__field {
+  position: relative;
   margin-bottom: 11px;
   margin-bottom: 0.6875rem;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5em;
+  line-height: 1;
+}
+
+.form__input {
+  width: 100%;
+  padding-left: 6em;
 }
 
 /**

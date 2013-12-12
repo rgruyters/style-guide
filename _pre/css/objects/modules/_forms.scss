@@ -1,0 +1,20 @@
+.form__hdr { }
+
+.form__field {
+  position: relative;
+  @include rem(margin-bottom, $half-spacing-unit);
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5em;
+  line-height: 1;
+}
+
+.form__input {
+  width: 100%;
+  padding-left: 6em;
+}
