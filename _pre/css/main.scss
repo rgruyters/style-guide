@@ -1,15 +1,14 @@
 @charset "UTF-8";
 
+$typecsset-show-baseline: true;
+
 /*
  * Generic stuff
  */
 @import
   "generic/defaults",
-  "generic/mixins",
-  "generic/functions",
-  "generic/reset",
-  "generic/normalize",
-  "generic/debug";
+  "generic/typecsset",
+  "generic/reset";
 
 /*
  * Base
@@ -32,7 +31,6 @@
  */
 @import
   "objects/layout/generic";
-  // "objects/layout/footer"
 
 /*
  * Objects: modules
@@ -53,5 +51,5 @@
 /*
  * Objects: themes
  */
-// @import
-//   "objects/themes/generic";
+@import
+  "objects/themes/generic";

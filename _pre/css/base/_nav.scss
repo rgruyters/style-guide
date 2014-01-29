@@ -1,5 +1,5 @@
 nav {
-  @include rem(margin-bottom, $base-spacing-unit);
+  @include typecssset-rhythm(margin-bottom, 1);
 
   ul {
     margin-left: 0;

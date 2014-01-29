@@ -5,11 +5,27 @@ video { max-width: 100%; }
 
 img {
   height: auto;
+  border: 0;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;
 }
 
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+  @include typecssset-rhythm(margin-bottom, 1);
+}
+
 figcaption {
-  @include rem(margin-top, $half-spacing-unit);
-  @include rem(margin-bottom, $half-spacing-unit);
+  @include typecssset-rhythm(margin-top, 0.5);
+  @include typecssset-rhythm(margin-bottom, 0.5);
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+    overflow: hidden;
 }

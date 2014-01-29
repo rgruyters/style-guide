@@ -2,7 +2,7 @@
 
 .form__field {
   position: relative;
-  @include rem(margin-bottom, $half-spacing-unit);
+  @include typecssset-rhythm(margin-bottom, 1);
 }
 
 .form__label {

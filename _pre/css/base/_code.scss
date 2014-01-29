@@ -1,11 +1,28 @@
-pre { word-wrap: break-word; }
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
 
 pre,
 code,
 .code {
   margin-top: 0;
-  @include rem(margin-bottom, $base-spacing-unit);
-  @include rem(padding, $half-spacing-unit);
+  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecssset-rhythm(padding, 0.5);
   color: $color-main;
 }
 

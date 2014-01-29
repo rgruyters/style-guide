@@ -1,13 +1,18 @@
+/**
+ * Remove most spacing between table cells.
+ */
 table {
-  @include rem(margin-bottom, $base-spacing-unit);
+  border-collapse: collapse;
+  border-spacing: 0;
+  @include typecssset-rhythm(margin-bottom, 1);
 }
 
 th {
-  @include rem(padding, $half-spacing-unit);
+  @include typecssset-rhythm(padding, 0.5);
   text-align: left;
 }
 
 td {
-  @include rem(padding, $half-spacing-unit);
+  @include typecssset-rhythm(padding, 0.5);
   vertical-align: top;
 }

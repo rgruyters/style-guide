@@ -1,16 +1,13 @@
 @for $h from 1 through 6 {
   h#{$h} {
-    margin: 0;
+    @extend %typecsset-vertical-rhythm;
     font-family: $header-font-family;
   }
 }
 
-h1, .alpha   {
-  @include font-size($h1-size, true);
-  @include rem(margin-bottom, ($h1-size / $base-line-height)*1px);
-}
-h2, .beta    { @include font-size($h2-size, true); }
-h3, .gamma   { @include font-size($h3-size, true); }
-h4, .delta   { @include font-size($h4-size, true); }
-h5, .epsilon { @include font-size($h5-size, true); }
-h6, .zeta    { @include font-size($h6-size, true); }
+h1, .alpha   { @include typecsset-font-size($typecsset-h1-size); }
+h2, .beta    { @include typecsset-font-size($typecsset-h2-size); }
+h3, .gamma   { @include typecsset-font-size($typecsset-h3-size); }
+h4, .delta   { @include typecsset-font-size($typecsset-h4-size); }
+h5, .epsilon { @include typecsset-font-size($typecsset-h5-size); }
+h6, .zeta    { @include typecsset-font-size($typecsset-h6-size); }

@@ -1,4 +1,4 @@
 p {
-    margin-top: 0;
-    @include rem(margin-bottom, $base-spacing-unit);
+  margin-top: 0;
+  @include typecssset-rhythm(margin-bottom, 1);
 }

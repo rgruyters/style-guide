@@ -1,12 +1,18 @@
+/**
+ * 1. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
 html {
   min-height: 100%;
-  font-size: #{($base-font-size / 16px) * 100%};
   font-family: $base-font-family;
-  line-height: $line-height-ratio;
   overflow-y: scroll;
+  text-size-adjust: 100%; /* 1 */
 }
 
+/**
+ * 1. Remove default margin.
+ */
 body {
-  background-color: $color-bg;
+  margin: 0; /* 1 */
   color: $color-text;
 }

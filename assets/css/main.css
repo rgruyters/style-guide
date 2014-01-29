@@ -5,6 +5,65 @@
  * Generic stuff
  */
 
+/**
+ * Typecsset
+ *
+ * Typecsset is a small, unopinionated library for creating beautifully set type
+ * on the web. Typecsset gives perfect vertical rhythm at any configurable font
+ * size, as well as many other typographical niceties.
+ */
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+
+/**
+ * A lot of elements in Typecsset need to share some declarations (mainly for
+ * vertical rhythm), so we `@extend` some silent classes.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/*------------------------------------*\
+    #BASE
+\*------------------------------------*/
+
+/**
+ * 1. Set the base element’s `font-size` to the value of your choosing. Set in
+ *    ems, assuming a browser default of 16px.
+ * 2. Work out the unitless `line-height` for your project based around your
+ *    desired `line-height` (defined previously in pixels), and your project’s
+ *    base font size.
+ * 3. If you have chosen to display a baseline grid, we turn it on here.
+ */
+
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [2] */
+  background-image: url(http://basehold.it/i/24);
+  /* [3] */
+}
+
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
 
 *,
@@ -14,11 +73,7 @@
   box-sizing: border-box;
 }
 
-/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
-
-/* ==========================================================================
-   HTML5 display definitions
-   ========================================================================== */
+/* Based on normalize.css v2.1.2 | git.io/normalize */
 
 /**
  * Correct `block` display not defined in IE 8/9.
@@ -67,91 +122,183 @@ audio:not([controls]) {
   display: none;
 }
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/*
+ * Base
+ */
 
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
+ * 1. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
 
 html {
-  font-family: sans-serif;
+  min-height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+  overflow-y: scroll;
+  text-size-adjust: 100%;
   /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
 /**
- * Remove default margin.
+ * 1. Remove default margin.
  */
 
 body {
   margin: 0;
+  /* 1 */
+  color: #333333;
 }
 
-/* ==========================================================================
-   Links
-   ========================================================================== */
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h2 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h5 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h6 {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+h1,
+.alpha {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+h2,
+.beta {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.3333333;
+}
+
+h3,
+.gamma {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
+}
+
+h4,
+.delta {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h5,
+.epsilon {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h6,
+.zeta {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.3333333;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
 
 /**
- * Address `outline` inconsistency between Chrome and other browsers.
+ * 1. Address `outline` inconsistency between Chrome and other browsers.
+ * 2. Improve readability when focused and also mouse hovered in all browsers.
  */
+
+a {
+  color: #34495e;
+  text-decoration: underline;
+  word-wrap: break-word;
+}
 
 a:focus {
   outline: thin dotted;
+  /* 1 */
 }
-
-/**
- * Improve readability when focused and also mouse hovered in all browsers.
- */
 
 a:active,
 a:hover {
   outline: 0;
+  /* 2 */
 }
 
-/* ==========================================================================
-   Typography
-   ========================================================================== */
+a:hover,
+a:focus {
+  color: #3498db;
+}
+
+ins,
+mark {
+  color: #fff;
+}
+
+ins {
+  text-decoration: none;
+}
 
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9.
  */
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
+mark {
+  font-style: italic;
+  background: #ff0;
+  color: #000;
+}
+
+del {
+  text-decoration: line-through;
 }
 
 /**
- * Address styling not present in IE 8/9, Safari 5, and Chrome.
- */
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-/**
- * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ * 1. Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
 
 b,
 strong {
-  font-weight: bold;
+  font-weight: 700;
+  /* 1 */
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * 1. Address styling not present in Safari 5 and Chrome.
  */
 
 dfn {
   font-style: italic;
+  /* 1 */
+}
+
+/**
+ * 1. Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  /* 1 */
+  cursor: help;
 }
 
 /**
@@ -162,43 +309,6 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
-}
-
-/**
- * Address styling not present in IE 8/9.
- */
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-/**
- * Correct font family set oddly in Safari 5 and Chrome.
- */
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
-pre {
-  white-space: pre-wrap;
-}
-
-/**
- * Set consistent quote types.
- */
-
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
 }
 
 /**
@@ -229,16 +339,114 @@ sub {
   bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
+q {
+  display: inline;
+  content: "\201C" "\201D" "\2018" "\2019";
+}
+
+q:before {
+  content: open-quote;
+}
+
+q:after {
+  content: close-quote;
+}
+
+cite,
+blockquote {
+  font-style: italic;
+  color: #222f3d;
+}
+
+blockquote {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding: 24px;
+  padding: 1.5rem;
+  background-color: #e1f0fa;
+}
+
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+
+blockquote cite:before {
+  content: "— \0020";
+}
 
 /**
- * Remove border when inside `a` element in IE 8/9.
+ * Improve readability of pre-formatted text in all browsers.
  */
 
+pre {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre,
+code,
+.code {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding: 12px;
+  padding: 0.75rem;
+  color: #34495e;
+}
+
+pre code,
+.code code {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.code li {
+  list-style-type: decimal-leading-zero;
+}
+
+img,
+embed,
+object,
+video {
+  max-width: 100%;
+}
+
 img {
+  height: auto;
   border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+figcaption {
+  margin-top: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
 }
 
 /**
@@ -249,30 +457,62 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* ==========================================================================
-   Figures
-   ========================================================================== */
-
-/**
- * Address margin not present in IE 8/9 and Safari 5.
- */
-
-figure {
-  margin: 0;
+ul,
+ol,
+dl {
+  margin-top: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding-left: 1%;
 }
 
-/* ==========================================================================
-   Forms
-   ========================================================================== */
+ul ul,
+ol ol,
+dl dl {
+  margin-bottom: 0;
+}
+
+ul li,
+ol li {
+  margin-left: 1%;
+}
+
+ul {
+  list-style: disc;
+}
+
+ol {
+  list-style: decimal;
+}
+
+dl dt {
+  font-weight: bold;
+}
+
+dl dd {
+  margin: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
+
+dl dd:last-of-type {
+  margin-bottom: 0;
+}
+
+form {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+}
 
 /**
  * Define consistent border, margin, and padding.
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  margin: 0;
+  padding: 12px;
+  padding: 0.75rem;
+  border: none;
 }
 
 /**
@@ -285,6 +525,10 @@ legend {
   /* 1 */
   padding: 0;
   /* 2 */
+}
+
+label {
+  display: block;
 }
 
 /**
@@ -378,8 +622,8 @@ input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   -moz-box-sizing: content-box;
-  /* 2 */
   box-sizing: content-box;
+  /* 2 */
 }
 
 /**
@@ -414,305 +658,10 @@ textarea {
   /* 2 */
 }
 
-/* ==========================================================================
-   Tables
-   ========================================================================== */
-
-/**
- * Remove most spacing between table cells.
- */
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/*
- * Base
- */
-
-html {
-  min-height: 100%;
-  font-size: 100%;
-  font-family: Helvetica, Arial, sans-serif;
-  line-height: 1.375;
-  overflow-y: scroll;
-}
-
-body {
-  background-color: white;
-  color: #333333;
-}
-
-h1 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h2 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h3 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h4 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h5 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h6 {
-  margin: 0;
-  font-family: Helvetica, Arial, sans-serif;
-}
-
-h1,
-.alpha {
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 1.22222;
-  margin-bottom: 1.63636px;
-  margin-bottom: 0.10227rem;
-}
-
-h2,
-.beta {
-  font-size: 30px;
-  font-size: 1.875rem;
-  line-height: 1.46667;
-}
-
-h3,
-.gamma {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.83333;
-}
-
-h4,
-.delta {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.1;
-}
-
-h5,
-.epsilon {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.375;
-}
-
-h6,
-.zeta {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.57143;
-}
-
-p {
-  margin-top: 0;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-}
-
-a {
-  color: #34495e;
-  text-decoration: underline;
-  word-wrap: break-word;
-}
-
-a:hover,
-a:focus {
-  color: #3498db;
-}
-
-ins,
-mark {
-  color: #fff;
-}
-
-ins {
-  text-decoration: none;
-}
-
-mark {
-  font-style: italic;
-}
-
-del {
-  text-decoration: line-through;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
-dfn {
-  font-style: italic;
-}
-
-abbr[title],
-dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help;
-}
-
-q {
-  display: inline;
-  content: "\201C" "\201D" "\2018" "\2019";
-}
-
-q:before {
-  content: open-quote;
-}
-
-q:after {
-  content: close-quote;
-}
-
-cite,
-blockquote {
-  font-style: italic;
-  color: #222f3d;
-}
-
-blockquote {
-  margin-top: 0;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-  padding: 22px;
-  padding: 1.375rem;
-  background-color: #e1f0fa;
-}
-
-blockquote p:last-of-type {
-  margin-bottom: 0;
-}
-
-blockquote cite:before {
-  content: "— \0020";
-}
-
-pre {
-  word-wrap: break-word;
-}
-
-pre,
-code,
-.code {
-  margin-top: 0;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-  padding: 11px;
-  padding: 0.6875rem;
-  color: #34495e;
-}
-
-pre code,
-.code code {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-}
-
-.code li {
-  list-style-type: decimal-leading-zero;
-}
-
-img,
-embed,
-object,
-video {
-  max-width: 100%;
-}
-
-img {
-  height: auto;
-  vertical-align: middle;
-  -ms-interpolation-mode: bicubic;
-}
-
-figcaption {
-  margin-top: 11px;
-  margin-top: 0.6875rem;
-  margin-bottom: 11px;
-  margin-bottom: 0.6875rem;
-}
-
-ul,
-ol,
-dl {
-  margin-top: 0;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-  padding-left: 1%;
-}
-
-ul ul,
-ol ol,
-dl dl {
-  margin-bottom: 0;
-}
-
-ul li,
-ol li {
-  margin-left: 1%;
-}
-
-ul {
-  list-style: disc;
-}
-
-ol {
-  list-style: decimal;
-}
-
-dl dt {
-  font-weight: bold;
-}
-
-dl dd {
-  margin: 0;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-}
-
-dl dd:last-of-type {
-  margin-bottom: 0;
-}
-
-form {
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
-}
-
-fieldset {
-  margin: 0;
-  padding: 11px;
-  padding: 0.6875rem;
-  border: none;
-}
-
-label {
-  display: block;
-}
-
 textarea,
 input:not([type="button"]) {
-  padding-top: 5.5px;
-  padding-top: 0.34375rem;
-  padding-bottom: 5.5px;
-  padding-bottom: 0.34375rem;
+  padding: 12px;
+  padding: 0.75rem;
   border: 2px solid #34495e;
   color: #34495e;
   text-indent: 1%;
@@ -727,20 +676,26 @@ input:not([type="button"]):focus {
   outline: none;
 }
 
+/**
+ * Remove most spacing between table cells.
+ */
+
 table {
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 th {
-  padding: 11px;
-  padding: 0.6875rem;
+  padding: 12px;
+  padding: 0.75rem;
   text-align: left;
 }
 
 td {
-  padding: 11px;
-  padding: 0.6875rem;
+  padding: 12px;
+  padding: 0.75rem;
   vertical-align: top;
 }
 
@@ -785,7 +740,8 @@ td {
 }
 
 .nav--block > li > a {
-  padding: 11px;
+  padding: 12px;
+  padding: 0.75rem;
 }
 
 .nav--fit {
@@ -803,8 +759,8 @@ td {
 
 .form__field {
   position: relative;
-  margin-bottom: 11px;
-  margin-bottom: 0.6875rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .form__label {
@@ -827,23 +783,23 @@ td {
 
 .img--right {
   float: right;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   margin-left: 1%;
 }
 
 .img--left {
   float: left;
   margin-right: 1%;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 
 .img--center {
   display: block;
   margin-right: auto;
-  margin-bottom: 22px;
-  margin-bottom: 1.375rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   margin-left: auto;
 }
 
@@ -851,7 +807,7 @@ td {
   border: none;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 1.57143;
+  line-height: 1.7142857;
 }
 
 .btn--main {

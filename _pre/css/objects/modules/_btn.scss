@@ -1,6 +1,6 @@
 .btn {
   border: none;
-  @include font-size(14px, true);
+  @include typecsset-font-size(14px);
 }
 
 .btn--main {

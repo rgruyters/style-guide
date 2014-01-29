@@ -1,5 +1,0 @@
-@if $debug == true {
-  body {
-    @include debug-vertical-alignment();
-  }
-}

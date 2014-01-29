@@ -5,7 +5,8 @@ module.exports = function(grunt){
     sass: {
       build: {
         options: {
-          style: 'expanded'
+          style: 'expanded',
+          precision: 7
         },
         files: [{
           expand: true,
