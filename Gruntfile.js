@@ -68,11 +68,7 @@ module.exports = function(grunt){
         undef:   true,
         boss:    true,
         eqnull:  true,
-        browser: true,
-
-        globals: {
-          jQuery: true
-        }
+        browser: true
       },
       directives: {
         // The number of spaces used for indentation

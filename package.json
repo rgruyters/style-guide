@@ -1,7 +1,12 @@
 {
-  "name": "Style_Guide",
-  "version": "0.0.1",
-  "author": "Robin Gruyters",
+  "name"      : "Style_Guide",
+  "version"   : "0.0.1",
+  "author"    : "Robin Gruyters",
+  "homepage"  : "http://kissthesky.nl",
+  "repository": {
+    "type": "git",
+    "url" : "git://github.com/rgruyters/style-guide.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-watch": "~0.5.3",
