@@ -14,8 +14,8 @@ blockquote {
 
 blockquote {
   margin-top: 0;
-  @include typecssset-rhythm(margin-bottom, 1);
-  @include typecssset-rhythm(padding, 1);
+  @include typecsset-space(margin-bottom, 1);
+  @include typecsset-space(padding, 1);
   background-color: lighten($color-accent, 40%);
 
   p:last-of-type { margin-bottom: 0; }

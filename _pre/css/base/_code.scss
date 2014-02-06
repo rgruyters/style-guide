@@ -21,8 +21,8 @@ pre,
 code,
 .code {
   margin-top: 0;
-  @include typecssset-rhythm(margin-bottom, 1);
-  @include typecssset-rhythm(padding, 0.5);
+  @include typecsset-space(margin-bottom, 1);
+  @include typecsset-space(padding, 0.5);
   color: $color-main;
 }
 

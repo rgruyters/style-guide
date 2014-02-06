@@ -1,6 +1,9 @@
 .btn {
+  padding: 0.5714285rem 22px;
+  @include typecsset-space(margin-bottom, 0.5);
   border: none;
   @include typecsset-font-size(14px);
+  font-weight: $bold-font-weight;
 }
 
 .btn--main {

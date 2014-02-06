@@ -15,12 +15,12 @@ img {
  */
 figure {
   margin: 0;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
 }
 
 figcaption {
-  @include typecssset-rhythm(margin-top, 0.5);
-  @include typecssset-rhythm(margin-bottom, 0.5);
+  @include typecsset-space(margin-top, 0.5);
+  @include typecsset-space(margin-bottom, 0.5);
 }
 
 /**

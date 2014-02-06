@@ -4,5 +4,26 @@
 .msg--invalid { color: $color-invalid; }
 .msg--info    { color: $color-main; }
 
+.msg-boxed {
+  display: block;
+  @include typecsset-space(margin-bottom, 1.4);
+  @include typecsset-space(padding, 0.3);
+  @include typecsset-font-size(14px);
+  font-style: italic;
+
+  &.msg--invalid {
+    background-color: $color-invalid;
+    color: #fff;
+  }
+  &.msg--valid {
+    background-color: $color-valid;
+    color: #fff;
+  }
+  &.msg--info {
+    background-color: $color-main;
+    color: #fff;
+  }
+}
+
 .is-valid     { border-color: $color-valid!important; }
 .is-invalid   { border-color: $color-invalid!important; }

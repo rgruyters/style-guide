@@ -3,18 +3,18 @@
  */
 .img--right {
   float:right;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
   margin-left: $gutter-unit;
 }
 .img--left {
   float:left;
   margin-right:$gutter-unit;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
 }
 .img--center {
   display:block;
   margin-right:auto;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
   margin-left:auto;
 }
 

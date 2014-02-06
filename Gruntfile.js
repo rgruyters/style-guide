@@ -86,8 +86,8 @@ module.exports = function(grunt){
         // don't require use strict pragma
         // sloppy: true
       },
-      beforeconcat: ['_pre/js/**/*.js'],
-      afterconcat: ['assets/js/main.js']
+      beforeconcat: ['<%= concat.dist.src %>'],
+      afterconcat: ['<%= concat.dist.dest %>']
     },
 
     uglify: {

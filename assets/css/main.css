@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /*
  * Generic stuff
  */
@@ -60,8 +59,6 @@ html {
   /* [1] */
   line-height: 1.5;
   /* [2] */
-  background-image: url(http://basehold.it/i/24);
-  /* [3] */
 }
 
 /* Border-Box http:/paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -510,8 +507,8 @@ form {
 
 fieldset {
   margin: 0;
-  padding: 12px;
-  padding: 0.75rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   border: none;
 }
 
@@ -664,9 +661,10 @@ input:not([type="button"]) {
   padding: 0.75rem;
   border: 2px solid #34495e;
   color: #34495e;
-  text-indent: 1%;
   border-radius: 2px;
   box-shadow: none;
+  -webkit-transition: border-color 0.2s ease-in;
+  transition: border-color 0.2s ease-in;
 }
 
 textarea:focus,
@@ -763,18 +761,17 @@ td {
   margin-bottom: 1.5rem;
 }
 
-.form__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 5em;
-  line-height: 1;
-}
-
 .form__input {
   width: 100%;
-  padding-left: 6em;
+}
+
+.form-inline .form__label {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-inline .form__input {
+  width: 90%;
 }
 
 /**
@@ -804,10 +801,14 @@ td {
 }
 
 .btn {
+  padding: 0.5714285rem 22px;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   border: none;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.7142857;
+  font-weight: 700;
 }
 
 .btn--main {
@@ -871,6 +872,33 @@ td {
 
 .msg--info {
   color: #34495e;
+}
+
+.msg-boxed {
+  display: block;
+  margin-bottom: 33.6px;
+  margin-bottom: 2.1rem;
+  padding: 7.2px;
+  padding: 0.45rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7142857;
+  font-style: italic;
+}
+
+.msg-boxed.msg--invalid {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.msg-boxed.msg--valid {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.msg-boxed.msg--info {
+  background-color: #34495e;
+  color: #fff;
 }
 
 .is-valid {

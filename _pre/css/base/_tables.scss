@@ -4,15 +4,15 @@
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
 }
 
 th {
-  @include typecssset-rhythm(padding, 0.5);
+  @include typecsset-space(padding, 0.5);
   text-align: left;
 }
 
 td {
-  @include typecssset-rhythm(padding, 0.5);
+  @include typecsset-space(padding, 0.5);
   vertical-align: top;
 }

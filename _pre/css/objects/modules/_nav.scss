@@ -24,7 +24,7 @@
     letter-spacing: normal;
     word-spacing: normal;
 
-    > a{ @include typecssset-rhythm(padding, 0.5); }
+    > a{ @include typecsset-space(padding, 0.5); }
   }
 }
 

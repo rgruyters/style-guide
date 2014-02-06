@@ -1,11 +1,11 @@
-form {   @include typecssset-rhythm(margin-bottom, 1); }
+form {   @include typecsset-space(margin-bottom, 1); }
 
 /**
  * Define consistent border, margin, and padding.
  */
 fieldset {
   margin: 0;
-  @include typecssset-rhythm(padding, 0.5);
+  @include typecsset-space(margin-bottom, 1);
   border: none;
 }
 
@@ -119,12 +119,12 @@ textarea {
 
 textarea,
 input:not([type="button"]) {
-  @include typecssset-rhythm(padding, 0.5);
+  @include typecsset-space(padding, 0.5);
   border: 2px solid $color-main;
   color: #34495e;
-  text-indent: $gutter-unit;
   border-radius: 2px;
   box-shadow: none;
+  transition: border-color 0.2s ease-in;
 
   &:focus {
     border-color: $color-accent;

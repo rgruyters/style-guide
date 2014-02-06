@@ -2,19 +2,24 @@
 
 .form__field {
   position: relative;
-  @include typecssset-rhythm(margin-bottom, 1);
+  @include typecsset-space(margin-bottom, 1);
 }
 
-.form__label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 5em;
-  line-height: 1;
-}
+// .form__label.inline {
+//   display: inline-block;
+//   vertical-align: middle;
+// }
 
 .form__input {
   width: 100%;
-  padding-left: 6em;
+}
+
+.form-inline {
+  .form__label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .form__input {
+    width: 90%;
+  }
 }
