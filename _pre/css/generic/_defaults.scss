@@ -1,7 +1,7 @@
 $ie: false;
 $debug: false;
 
-$base-font-family:     Helvetica, Arial, sans-serif;
+$base-font-family:     'Open Sans', Helvetica, Arial, sans-serif;
 $header-font-family:   $base-font-family;
 $base-font-weight:     400;
 $semibold-font-weight: 500;
@@ -16,3 +16,5 @@ $color-valid:   #1abc9c!default;
 $color-invalid: #e74c3c!default;
 
 $gutter-unit: 1%;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600);

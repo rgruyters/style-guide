@@ -1,4 +1,7 @@
 p {
   margin-top: 0;
   @include typecsset-space(margin-bottom, 1);
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  font-kerning: normal;
 }

@@ -6,6 +6,7 @@ module.exports = function(grunt){
       build: {
         options: {
           style: 'expanded',
+          sourcemap: true,
           precision: 7
         },
         files: [{
@@ -56,6 +57,17 @@ module.exports = function(grunt){
       build: [ 'assets/css/*.min.css']
     },
 
+    coffee: {
+      build: {
+        expand: true,
+        flatten: true,
+        cwd: '_pre/js',
+        src: ['*.coffee'],
+        dest: '<%= coffee.build.cwd %>',
+        ext: '.js'
+      }
+    },
+
     jshint: {
       options: {
         curly:   true,
@@ -68,7 +80,8 @@ module.exports = function(grunt){
         undef:   true,
         boss:    true,
         eqnull:  true,
-        browser: true
+        browser: true,
+        "globals": { "console": true }
       },
       directives: {
         // The number of spaces used for indentation
@@ -88,6 +101,7 @@ module.exports = function(grunt){
 
     uglify: {
       options: {
+        sourceMap: true,
         mangle: {
           except: ['jQuery', 'Backbone']
         }
@@ -115,7 +129,14 @@ module.exports = function(grunt){
         files: [
           '_pre/css/**/*'
         ],
-        tasks: ['sass:build', 'autoprefixer'],
+        tasks: ['sass:build', 'autoprefixer', ],
+      },
+
+      js: {
+        files: [
+          '_pre/js/**/*'
+        ],
+        tasks: ['build_js', 'uglify']
       },
 
       images: {
@@ -131,7 +152,7 @@ module.exports = function(grunt){
   // Register the default tasks.
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build_css', ['sass:build', 'autoprefixer']);
-  grunt.registerTask('build_js', ['jshint', 'concat']);
-  grunt.registerTask('build', ['clean', 'build_css', 'build_js', 'imagemin']);
-  grunt.registerTask('release', ['build', 'cssmin', 'uglify'])
+  grunt.registerTask('build_js', ['coffee', 'jshint', 'concat']);
+  grunt.registerTask('build', ['clean', 'build_css', 'build_js', 'imagemin', 'cssmin', 'uglify']);
+  grunt.registerTask('release', ['build'])
 };

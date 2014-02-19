@@ -4,8 +4,15 @@
 .l-stacked { }
 
 .wrapper {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
+
+  @media screen and (min-width: 40em) { // 640px
+    width: 92%;
+  }
+  @media screen and (min-width: 60em) { // 960px
+    width: 80%;
+  }
 }
 
 .page { }

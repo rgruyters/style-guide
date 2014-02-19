@@ -1,11 +1,11 @@
 {
-  "name"      : "Style_Guide",
-  "version"   : "0.0.1",
-  "author"    : "Robin Gruyters",
-  "homepage"  : "http://kissthesky.nl",
+  "name": "Style_Guide",
+  "version": "0.0.1",
+  "author": "Robin Gruyters",
+  "homepage": "http://kissthesky.nl",
   "repository": {
     "type": "git",
-    "url" : "git://github.com/rgruyters/style-guide.git"
+    "url": "git://github.com/rgruyters/style-guide.git"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -15,10 +15,11 @@
     "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-imagemin": "~0.4.0",
-    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-uglify": "~0.3.2",
     "grunt-contrib-jshint": "~0.7.2",
     "load-grunt-tasks": "~0.2.0",
-    "grunt-contrib-concat": "~0.3.0"
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-coffee": "~0.10.1"
   },
   "dependencies": {}
 }

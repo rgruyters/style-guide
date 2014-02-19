@@ -38,3 +38,10 @@
     > a{ display: block; }
   }
 }
+
+.nav--justified {
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+  }
+}

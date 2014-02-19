@@ -4,6 +4,8 @@
  * Generic stuff
  */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,600);
+
 /**
  * Typecsset
  *
@@ -130,7 +132,7 @@ audio:not([controls]) {
 
 html {
   min-height: 100%;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   overflow-y: scroll;
   text-size-adjust: 100%;
   /* 1 */
@@ -147,27 +149,27 @@ body {
 }
 
 h1 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h2 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h3 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h4 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h5 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h6 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h1,
@@ -216,6 +218,13 @@ p {
   margin-top: 0;
   margin-bottom: 24px;
   margin-bottom: 1.5rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  font-feature-settings: "kern";
+  -webkit-font-kerning: normal;
+  -moz-font-kerning: normal;
+  font-kerning: normal;
 }
 
 /**
@@ -702,8 +711,20 @@ td {
  */
 
 .wrapper {
-  width: 80%;
+  width: 98%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 40em) {
+  .wrapper {
+    width: 92%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .wrapper {
+    width: 80%;
+  }
 }
 
 /*
@@ -753,6 +774,19 @@ td {
 
 .nav--fit > li > a {
   display: block;
+}
+
+@media only screen and (min-width: 37.5em) {
+  .nav--justified {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
 }
 
 .form__field {
@@ -912,3 +946,5 @@ td {
 /*
  * Objects: themes
  */
+
+/*# sourceMappingURL=main.css.map */

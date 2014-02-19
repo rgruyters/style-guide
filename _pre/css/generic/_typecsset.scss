@@ -86,6 +86,10 @@ $typecsset-magic-ratio:         $typecsset-base-line-height / $typecsset-base-fo
     @return $number / ($number * 0 + 1);
 }
 
+@function typecsset-incr($font-size, $x: 4, $y: 5) {
+    @return (($typecsset-base-line-height / $font-size) * ($x / $y)) * 0 + 1
+}
+
 
 /*------------------------------------*\
     #SHARED
