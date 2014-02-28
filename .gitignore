@@ -12,3 +12,7 @@ Thumbs.db
 
 # Node.js
 node_modules
+bower_components
+
+##
+_pre/build
