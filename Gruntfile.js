@@ -1,5 +1,5 @@
 module.exports = function(grunt){
-  var assetsPath = {
+  var assets = {
     sass: '_pre/css',
     coffee: '_pre/js',
     css: 'assets/css',
@@ -9,7 +9,7 @@ module.exports = function(grunt){
   };
 
   grunt.initConfig({
-    assetsPath: assetsPath,
+    assets: assets,
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
@@ -21,9 +21,9 @@ module.exports = function(grunt){
         },
         files: [{
           expand: true,
-          cwd: '<%= assetsPath.sass %>',
+          cwd: '<%= assets.sass %>',
           src: ['*.scss'],
-          dest: '<%= assetsPath.css %>',
+          dest: '<%= assets.css %>',
           ext: '.css'
         }]
       }
@@ -36,7 +36,7 @@ module.exports = function(grunt){
         map: true
       },
       no_dest: {
-        src: '<%= assetsPath.css %>/!(*.min).css'
+        src: '<%= assets.css %>/!(*.min).css'
       }
     },
 
@@ -46,9 +46,9 @@ module.exports = function(grunt){
       },
       prod: {
         files: {
-          '<%= assetsPath.css %>/main.min.css': [
-            '<%= assetsPath.css %>/*.css',
-            '!<%= assetsPath.css %>/*.min.css'
+          '<%= assets.css %>/main.min.css': [
+            '<%= assets.css %>/*.css',
+            '!<%= assets.css %>/*.min.css'
           ]
         }
       }
@@ -67,9 +67,9 @@ module.exports = function(grunt){
 
     clean: {
       build: [
-        '<%= assetsPath.css %>/**/*',
-        '<%= assetsPath.js %>/**/*',
-        '<%= assetsPath.build %>/**/*'
+        '<%= assets.css %>/**/*',
+        '<%= assets.js %>/**/*',
+        '<%= assets.build %>/**/*'
       ]
     },
 
@@ -77,9 +77,9 @@ module.exports = function(grunt){
       build: {
         expand: true,
         flatten: true,
-        cwd: '<%= assetsPath.coffee %>',
+        cwd: '<%= assets.coffee %>',
         src: ['*.coffee'],
-        dest: '<%= assetsPath.build %>',
+        dest: '<%= assets.build %>',
         ext: '.js'
       }
     },
@@ -101,7 +101,7 @@ module.exports = function(grunt){
         indent: 2,
         nomen: true
       },
-      all: ['<%= assetsPath.build %>/*.js', 'Gruntfile.js']
+      all: ['<%= assets.build %>/*.js', 'Gruntfile.js']
     },
 
     uglify: {
@@ -120,8 +120,8 @@ module.exports = function(grunt){
 
     concat: {
       dist: {
-        src: ['<%= assetsPath.build %>/**/*.js'],
-        dest: '<%= assetsPath.js %>/main.js'
+        src: ['<%= assets.build %>/**/*.js'],
+        dest: '<%= assets.js %>/main.js'
       }
     },
 
@@ -131,7 +131,7 @@ module.exports = function(grunt){
       },
       scripts: {
         options: {
-          destPrefix: '<%= assetsPath.build %>'
+          destPrefix: '<%= assets.build %>'
         },
         src: '*/*.js'
       }
@@ -144,14 +144,14 @@ module.exports = function(grunt){
 
       css: {
         files: [
-          '<%= assetsPath.sass %>/**/*'
+          '<%= assets.sass %>/**/*'
         ],
         tasks: ['sass:build', 'autoprefixer', ],
       },
 
       js: {
         files: [
-          '<%= assetsPath.coffee %>/**/*'
+          '<%= assets.coffee %>/**/*'
         ],
         tasks: ['build_js', 'uglify']
       },
