@@ -1,0 +1,20 @@
+$old-ie: false !default;
+
+@mixin old-ie {
+  @if old-ie {
+    @content;
+  }
+}
+
+@mixin mq($type: alpha) {
+  @if $type == alpha {
+    @media only screen and (min-width: 37.5em) { // 600px
+      @content;
+    }
+  }
+  @if $type == bravo {
+    @media only screen and (min-width: 68.75em) { // 1100px
+      @content;
+    }
+  }
+}
