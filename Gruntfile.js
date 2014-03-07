@@ -15,7 +15,7 @@ module.exports = function(grunt){
     sass: {
       build: {
         options: {
-          style: 'expanded',
+          style: 'compressed',
           sourcemap: true,
           precision: 7
         },
@@ -23,8 +23,8 @@ module.exports = function(grunt){
           expand: true,
           cwd: '<%= assets.sass %>',
           src: ['*.scss'],
-          dest: '<%= assets.css %>',
-          ext: '.css'
+          dest: '<%= assets.build %>',
+          ext: '.min.css'
         }]
       }
     },
@@ -32,11 +32,13 @@ module.exports = function(grunt){
     autoprefixer: {
       options: {
         browsers: ['last 2 version'],
-        cascade: true,
         map: true
       },
-      no_dest: {
-        src: '<%= assets.css %>/!(*.min).css'
+      build: {
+        expand: true,
+        flatten: true,
+        src: '<%= assets.build %>/*.css',
+        dest: '<%= assets.css %>/'
       }
     },
 
@@ -101,7 +103,7 @@ module.exports = function(grunt){
         indent: 2,
         nomen: true
       },
-      all: ['<%= assets.build %>/*.js', 'Gruntfile.js']
+      all: ['Gruntfile.js', '<%= assets.build %>/*.js']
     },
 
     uglify: {
@@ -121,7 +123,7 @@ module.exports = function(grunt){
     concat: {
       dist: {
         src: ['<%= assets.build %>/**/*.js'],
-        dest: '<%= assets.js %>/main.js'
+        dest: '<%= assets.build %>/main-combined.js'
       }
     },
 
@@ -180,6 +182,6 @@ module.exports = function(grunt){
   grunt.registerTask('default', ['watch']);
   grunt.registerTask('build_css', ['sass:build', 'autoprefixer']);
   grunt.registerTask('build_js', ['bowercopy', 'coffee', 'jshint', 'concat']);
-  grunt.registerTask('build', ['clean', 'build_css', 'build_js', 'imagemin', 'cssmin', 'uglify']);
+  grunt.registerTask('build', ['clean', 'build_css', 'build_js', 'imagemin', 'uglify']);
   grunt.registerTask('release', ['build']);
 };
