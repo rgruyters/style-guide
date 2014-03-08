@@ -46,13 +46,12 @@ module.exports = function(grunt){
       options: {
         report: 'min'
       },
-      prod: {
-        files: {
-          '<%= assets.css %>/main.min.css': [
-            '<%= assets.css %>/*.css',
-            '!<%= assets.css %>/*.min.css'
-          ]
-        }
+      minify: {
+        expand: true,
+        cwd: '<%= assets.css %>',
+        src: ['*.css', '!*.min.css'],
+        dest: '<%= assets.css %>',
+        ext: '.min.css'
       }
     },
 
@@ -180,7 +179,7 @@ module.exports = function(grunt){
 
   // Register the default tasks.
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build_css', ['sass:build', 'autoprefixer']);
+  grunt.registerTask('build_css', ['sass:build', 'autoprefixer', 'cssmin']);
   grunt.registerTask('build_js', ['bowercopy', 'coffee', 'jshint', 'concat']);
   grunt.registerTask('build', ['clean', 'build_css', 'build_js', 'imagemin', 'uglify']);
   grunt.registerTask('release', ['build']);
